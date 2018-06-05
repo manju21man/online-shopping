@@ -14,6 +14,15 @@
 	</properties>
 
 	<dependencies>
+
+		<!-- Link backend project -->
+		<dependency>
+			<groupId>com.manju</groupId>
+			<artifactId>shoppingBackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+
 		<!-- spring-webmvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
