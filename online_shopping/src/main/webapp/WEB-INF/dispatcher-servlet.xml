@@ -14,7 +14,7 @@
    ">
 
 	<context:component-scan base-package="com.manju.online_shopping.controller" />
-	<context:component-scan base-package="com.manju.shoppingBackend.daoImpl" />
+	<context:component-scan base-package="com.manju.shoppingBackend" />
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
