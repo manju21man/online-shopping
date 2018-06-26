@@ -3,6 +3,7 @@
         <div class="row">
 
             <div class="col-md-3">
+            <!-- online_shopping\src\main\webapp\WEB-INF\views\shared\sidebar.jsp -->
                 <%@include file="./shared/sidebar.jsp" %>
             </div>
 
