@@ -63,14 +63,14 @@ $(function() {
 			           {
 			        	   data : 'unitPrice',
 			        	   mRender : function( data, type, row){
-			        		   return '&#8377; ' + data;  // HTML entity symbol for Rupee symbol
+			        		   return '&#8377;' + data;  // HTML entity symbol for Rupee symbol
 			        	   }
 			           },
 			           {
 			        	   data : 'quantity'
 			           },
 			           {
-			        	   date : 'id',
+			        	   data : 'id',
 			        	   bSortable : false,
 			        	   mRender : function(data, type, row){
 			        		   var str = '';
