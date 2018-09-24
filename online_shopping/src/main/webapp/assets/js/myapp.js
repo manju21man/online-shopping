@@ -289,5 +289,68 @@ $(function() {
 	
 	// ------------------------------------------------------------------
 	
+	/*var $manageForm = $('#manageForm');
+	$(function() {
+		$manageForm.keyup(function() {
+
+			$manageForm.each(function() {
+				if (('#name').val() == '') {
+					$('#submit').attr('disabled', 'disabled');
+				}else{
+					$('#submit').removeAttr('disabled');
+				}
+			});
+
+			$('#file').change(function() {
+				if ($(this).val() == '') {
+					$('#submit').attr('disabled', 'disabled');
+				}else {
+					$('#submit').removeAttr('disabled');
+				}
+			});
+
+			$('#categoryId').change(optionFormEnabled);
+				function optionFormEnabled() {
+					if ($('#categoryId').val() == '') {
+						$('#submit').attr('disabled', 'disabled');
+					} else {
+						$('#submit').removeAttr('disabled');
+					}
+				}
+
+		});
+	})
+	*/
+
+	/* Manage products submit would be inactive till all form fields have been filled */
 	
+	$('#name, #brand, #description, #unitPrice, #quantity').bind('keyup',
+			function() {
+				if (allFilled())
+					$('#submit').removeAttr('disabled');
+			});
+
+	function allFilled() {
+		var filled = true;
+		$('body input').each(function() {
+			if ($(this).val() == '')
+				filled = false;
+		});
+		return filled;
+	}
+	
+	$('#file').change(function() {
+		if ($(this).val() == '') {
+			$('#submit').attr('disabled', 'disabled');
+		}else {
+			$('#submit').removeAttr('disabled');
+		}
+	});
+
+	$('#categoryId').change(function() {
+		if ($('#categoryId').val() != '') {
+			$('#submit').removeAttr('disabled');
+		} 
+	});
+			
 }); 

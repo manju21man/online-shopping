@@ -29,7 +29,7 @@
 					<!-- FORM ELEMENTS -->
 					<sf:form class="form-horizontal" modelAttribute="product"
 					action="${contextRoot}/manage/products"
-					 method="POST" enctype="multipart/form-data">
+					 method="POST" enctype="multipart/form-data" id="manageForm">
 					
 						<div class="form-group">
 							<label class="control-label col-md-4" for="name">Enter Product Name: </label>
@@ -101,7 +101,7 @@
 						
 						<div class="form-group">
 							<div class="col-md-offset-4 col-md-8">
-								<input type="submit" name="submit" id="submit" value="Submit" class="btn btn-primary">
+								<input type="submit" name="submit" id="submit" value="Submit" class="btn btn-primary" disabled="disabled" >
 								
 								<sf:hidden path="id"/>
 								<sf:hidden path="code"/>
