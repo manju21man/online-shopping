@@ -21,7 +21,7 @@ public class Address implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@ManyToOne
+	/*@ManyToOne
 	private User user;
 	
 	public User getUser() {
@@ -29,8 +29,21 @@ public class Address implements Serializable{
 	}
 	public void setUser(User user) {
 		this.user = user;
+	}*/
+
+
+	@Column(name="user_id")
+	private int userId;
+	
+	
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
+	
 	@Column(name = "address_line_one")
 	private String addressLineOne;
 	@Column(name = "address_line_two")

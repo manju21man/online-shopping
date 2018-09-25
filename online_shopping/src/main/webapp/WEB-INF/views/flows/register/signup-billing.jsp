@@ -82,12 +82,12 @@
 								<div class="col-md-offset-4 col-md-8">
 								<!-- submit button for moving to the personal -->
 									<button type="submit" name="_eventId_personal" class="btn btn-primary">
-										<span class="glyphicon glyphicon-chevron-left"></span> Back - Personal
+										<span class="glyphicon glyphicon-chevron-left"></span>Back
 									</button>	
 									
 									<!-- submit button for moving to the personal -->							
 									<button type="submit" name="_eventId_confirm" class="btn btn-primary">
-										Next - Confirm<span class="glyphicon glyphicon-chevron-right"></span>
+										Next<span class="glyphicon glyphicon-chevron-right"></span>
 									</button>																	 
 								</div>
 							</div>

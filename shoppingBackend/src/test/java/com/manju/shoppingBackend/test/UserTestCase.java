@@ -150,7 +150,7 @@ public class UserTestCase {
 		address.setBilling(true);
 		
 		// attached user to the address
-		address.setUser(user);
+		address.setUserId(user.getId());
 		
 		assertEquals("Failed to add address!", true, userDAO.addAddress(address));
 		
@@ -165,13 +165,13 @@ public class UserTestCase {
 		address.setShipping(true);
 		
 		// attached user to the address
-		address.setUser(user);
+		address.setUserId(user.getId());
 				
 		assertEquals("Failed to add shipping address!", true, userDAO.addAddress(address));
 		
 	}*/
 	
-	/*@Test
+	@Test
 	public void testAddAddress(){
 		
 		user = userDAO.getByEmail("hr@gmail.com");
@@ -186,23 +186,23 @@ public class UserTestCase {
 		address.setShipping(true);
 		
 		// attached user to the address
-		address.setUser(user);
+		address.setUserId(user.getId());
 				
 		assertEquals("Failed to add shipping address!", true, userDAO.addAddress(address));
 		
 		
-	}*/
+	}
 	
-	@Test
+	/*@Test
 	public void testGetAddresses(){
 		
 		user = userDAO.getByEmail("hr@gmail.com");
 		
 		assertEquals("Failed to fetch the list of shipping address and size doesn't match!",2, 
-						userDAO.listShippingAddresses(user).size());
+						userDAO.listShippingAddresses(1).size());
 		
 		assertEquals("Failed to fetch the billing address!", "Bangalore", 
-				userDAO.getBillingAddress(user).getCity());
-	}
+				userDAO.getBillingAddress(1).getCity());
+	}*/
 }
 

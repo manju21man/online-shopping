@@ -47,6 +47,7 @@
 	<wf:flow-builder-services id="flowBuilderServices"
 		view-factory-creator="viewFactoryCreator" />
 
+<!-- Enables FlowHandler URL mapping -->
 <!-- Define FlowHandlerAdapter to handle Spring Web Flow request call.
      This is the Controller class in Spring Web Flow -->
 	<bean class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter">
