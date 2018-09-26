@@ -21,23 +21,6 @@ public class Cart implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private int id;
-	 
-	/*------*/
-	@OneToOne
-	//@JoinColumn(name="uid")
-	private User user;
-	
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-	
-	
-	/*------*/
-	
 	@Column(name = "grand_total")
 	private double grandTotal;
 	@Column(name = "cart_lines")
@@ -70,6 +53,18 @@ public class Cart implements Serializable {
 	@Override
 	public String toString() {
 		return "Cart [id=" + id + ", grandTotal=" + grandTotal + ", cartLines=" + cartLines + "]";
+	}
+
+	@OneToOne
+	//@JoinColumn(name="uid")
+	private User user;
+	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 }

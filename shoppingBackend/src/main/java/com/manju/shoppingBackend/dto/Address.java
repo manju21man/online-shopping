@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 @Entity
 public class Address implements Serializable{
 
@@ -20,37 +22,19 @@ public class Address implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
-	/*@ManyToOne
-	private User user;
-	
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}*/
-
-
-	@Column(name="user_id")
-	private int userId;
-	
-	
-	public int getUserId() {
-		return userId;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-
-	
+	@NotBlank(message = "Please enter address line one!")
 	@Column(name = "address_line_one")
 	private String addressLineOne;
+	@NotBlank(message = "Please enter address line two!")
 	@Column(name = "address_line_two")
 	private String addressLineTwo;
+	@NotBlank(message = "Please enter City!")
 	private String city;
+	@NotBlank(message = "Please enter State!")
 	private String state;
+	@NotBlank(message = "Please enter country!")
 	private String country;
+	@NotBlank(message = "Please enter Postal Code!")
 	@Column(name = "postal_code")
 	private String postalCode;
 	private boolean shipping;
@@ -118,5 +102,26 @@ public class Address implements Serializable{
 				+ postalCode + ", shipping=" + shipping + ", billing=" + billing + "]";
 	}
 
+	/*@ManyToOne
+	private User user;
+	
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}*/
+
+
+	@Column(name="user_id")
+	private int userId;
+	
+	
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	
 }
