@@ -4,8 +4,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.manju.online_shopping.exception.ProductNotFoundException;
@@ -114,7 +116,29 @@ public class PageController {
 	@RequestMapping(value = "/register")
 	public ModelAndView register(){
 		ModelAndView model = new ModelAndView("page");
-		model.addObject("title", "About Us");
+		model.addObject("title", "Register");
 		return model;
 	}
+	
+	/* Login */
+	@RequestMapping(value = "/login")
+	public ModelAndView login(@RequestParam(name="error", required=false) String error){
+		ModelAndView model = new ModelAndView("login");
+		if(error!=null){
+			model.addObject("message", "Invalid Username and Password!");
+		}
+		model.addObject("title", "Login");
+		return model;
+	}
+	
+	/* access- denied  */
+	@RequestMapping(value = "/access-denied")
+	public ModelAndView accessDenied(){
+		ModelAndView model = new ModelAndView("error");
+		model.addObject("title", "403 - Access Deied");
+		model.addObject("errorTitle", "Aha! Caught You.");
+		model.addObject("errorDescription", "You are not authorized to view this page!");
+		return model;
+	}
+	
 }

@@ -2,7 +2,8 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:wf="http://www.springframework.org/schema/webflow-config"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:wf="http://www.springframework.org/schema/webflow-config"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    	http://www.springframework.org/schema/beans/spring-beans.xsd

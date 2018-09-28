@@ -48,34 +48,33 @@
 				</div>
 			</div>
 		</nav>
-		
+
 		<div class="content">
-			
+
 			<div class="container">
-			
+
 				<div class="row">
-				
+
 					<div class="col-xs-12">
-					
+
 						<div class="jumbotron">
-						
+
 							<h1>${errorTitle}</h1>
-							<hr/>
-							
-							<blockquote style="word-wrap:break-word">
-								${errorDescription}
-							</blockquote>
-							
+							<hr />
+
+							<blockquote style="word-wrap: break-word">
+								${errorDescription}</blockquote>
+
 						</div>
-					
+
 					</div>
 				</div>
 			</div>
-		
+
 		</div>
-		
+
 		<%@include file="./shared/footer.jsp"%>
-		
+
 	</div>
 
 </body>

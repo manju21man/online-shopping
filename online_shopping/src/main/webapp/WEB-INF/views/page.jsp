@@ -18,12 +18,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
+<meta name="_csrf" content="${_csrf.token}">
+<meta name="_csrf_header" content="${_csrf.headerName}">
 
 <title>Online Shopping - ${title}</title>
 
 <script>
 	window.menu = '${title}';
-	
+
 	window.contextRoot = '${contextRoot}';
 </script>
 <!-- Bootstrap Core CSS -->
@@ -57,37 +59,38 @@
 		<!-- Page Content -->
 
 		<div class="content">
-<!-- /online_shopping/src/main/webapp/WEB-INF/views/home.jsp -->
+			<!-- /online_shopping/src/main/webapp/WEB-INF/views/home.jsp -->
 			<!-- Loading the home content -->
 			<c:if test="${userClickHome == true }">
 				<%@include file="home.jsp"%>
 			</c:if>
 
-<!-- /online_shopping/src/main/webapp/WEB-INF/views/about.jsp -->
+			<!-- /online_shopping/src/main/webapp/WEB-INF/views/about.jsp -->
 			<!-- Loading only when user clicks About us-->
 			<c:if test="${userClickAbout == true }">
 				<%@include file="about.jsp"%>
 			</c:if>
 
-<!-- /online_shopping/src/main/webapp/WEB-INF/views/contact.jsp -->
+			<!-- /online_shopping/src/main/webapp/WEB-INF/views/contact.jsp -->
 			<!-- Loading only when user clicks Contact us-->
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
 			</c:if>
-			
-<!-- /online_shopping/src/main/webapp/WEB-INF/views/listProduct.jsp -->			
+
+			<!-- /online_shopping/src/main/webapp/WEB-INF/views/listProduct.jsp -->
 			<!-- Loading only when user clicks all products-->
-			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+			<c:if
+				test="${userClickAllProducts == true or userClickCategoryProducts == true}">
 				<%@include file="listProduct.jsp"%>
 			</c:if>
-			
-<!-- /online_shopping/src/main/webapp/WEB-INF/views/singleProduct.jsp -->			
+
+			<!-- /online_shopping/src/main/webapp/WEB-INF/views/singleProduct.jsp -->
 			<!-- Loading only when user clicks single product-->
 			<c:if test="${userClickShowProduct == true }">
 				<%@include file="singleProduct.jsp"%>
 			</c:if>
-			
-<!-- /online_shopping/src/main/webapp/WEB-INF/views/manageProducts.jsp -->			
+
+			<!-- /online_shopping/src/main/webapp/WEB-INF/views/manageProducts.jsp -->
 			<!-- Loading only when user clicks manage products-->
 			<c:if test="${userClickManageProducts == true }">
 				<%@include file="manageProducts.jsp"%>
@@ -95,7 +98,7 @@
 
 		</div>
 
-<!-- /online_shopping/src/main/webapp/WEB-INF/views/shared/footer.jsp -->
+		<!-- /online_shopping/src/main/webapp/WEB-INF/views/shared/footer.jsp -->
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
 
@@ -103,19 +106,19 @@
 
 		<!-- jQuery -->
 		<script src="${js}/jquery.js"></script>
-		
+
 		<!-- jQuery validation -->
 		<script src="${js}/jquery.validate.js"></script>
 
 		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
-		
+
 		<!-- DataTable Plugin -->
 		<script src="${js}/jquery.dataTables.js"></script>
-		
+
 		<!-- DataTable Bootstrap Plugin -->
 		<script src="${js}/dataTables.bootstrap.js"></script>
-		
+
 		<!-- Bootbox  -->
 		<script src="${js}/bootbox.min.js"></script>
 
