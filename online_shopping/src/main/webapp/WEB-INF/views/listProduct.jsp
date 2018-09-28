@@ -18,8 +18,8 @@
 					<c:if test="${userClickAllProducts == true}">
 
 						<script>
-						window.categoryId = '';
-					</script>
+							window.categoryId = '';
+						</script>
 
 						<ol class="breadcrumb">
 							<li><a href="${contextRoot}/home">Home</a></li>
@@ -30,8 +30,8 @@
 					<c:if test="${userClickCategoryProducts == true}">
 
 						<script>
-						window.categoryId = '${category.id}';
-					</script>
+							window.categoryId = '${category.id}';
+						</script>
 
 						<ol class="breadcrumb">
 							<li><a href="${contextRoot}/home">Home</a></li>
