@@ -16,6 +16,7 @@ public class UserModel implements Serializable{
 	private String email;
 	private String role;
 	private Cart cart;
+	
 	public int getId() {
 		return id;
 	}

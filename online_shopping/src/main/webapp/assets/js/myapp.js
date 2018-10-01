@@ -17,13 +17,17 @@ $(function() {
 	case 'Manage Products':
 		$('#manageProducts').addClass('active');
 		break;
+		
+	case 'User cart':
+		$('#userCart').addClass('active');
+		break;
 
 	default:
 		if(menu == "Home") break;
-	$('#listProducts').addClass('active');
-	$('#a_'+menu).addClass('active');
-	break;
-	}
+		$('#listProducts').addClass('active');
+		$('#a_'+menu).addClass('active');
+		break;
+		}
 	
 	// to tackle the csrf token
 	var token = $('meta[name="_csrf"]').attr('content');
