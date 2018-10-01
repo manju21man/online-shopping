@@ -73,7 +73,20 @@
 
 						<!-- this msg will be displayed if wrong credentials are entered -->
 						<c:if test="${not empty message}">
-							<div class="alert alert-danger">${message}</div>
+							<%-- <div class="alert alert-danger">${message}</div> --%>
+							<div class="alert alert-danger alert-dismissible">
+								<button type="button" class="close" data-dismiss="alert">&times;</button>
+								${message}
+							</div>
+						</c:if>
+						
+						<!-- this msg will be displayed only when user has logged out -->
+						<c:if test="${not empty logout}">
+							<%-- <div class="alert alert-danger">${logout}</div> --%>
+							<div id="alert-danger" class="alert alert-danger alert-dismissible" role="alert">
+								<button type="button" class="close" data-dismiss="alert">&times;</button>
+								${logout}
+							</div>
 						</c:if>
 
 						<form action="${contextRoot}/login" method="POST" id="loginForm">
